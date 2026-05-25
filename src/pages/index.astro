@@ -1,6 +1,5 @@
 ---
 const title = "nightowl.engineer";
-const tagline = "Building things in the dark.";
 ---
 
 <html lang="en">
@@ -15,7 +14,6 @@ const tagline = "Building things in the dark.";
 
       :root {
         --bg: #0d1117;
-        --surface: #161b22;
         --text: #e6edf3;
         --muted: #8b949e;
         --accent: #58a6ff;
@@ -54,26 +52,11 @@ const tagline = "Building things in the dark.";
         color: var(--accent);
       }
 
-      .tagline {
-        margin-top: 1rem;
-        font-size: 1.125rem;
-        color: var(--muted);
-      }
-
-      footer {
-        position: fixed;
-        bottom: 1.5rem;
-        font-size: 0.8rem;
-        color: var(--muted);
-        opacity: 0.5;
-      }
     </style>
   </head>
   <body>
     <main>
       <h1 class="wordmark">nightowl.<span>engineer</span></h1>
-      <p class="tagline">{tagline}</p>
     </main>
-    <footer>{title}</footer>
   </body>
 </html>
