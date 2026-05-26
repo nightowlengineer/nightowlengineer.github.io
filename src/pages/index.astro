@@ -1,5 +1,9 @@
 ---
+import { Image } from 'astro:assets';
+import owlImg from '../assets/owl.png';
+
 const title = "nightowl.engineer";
+const url = "https://nightowl.engineer";
 ---
 
 <html lang="en">
@@ -8,7 +12,17 @@ const title = "nightowl.engineer";
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={title} />
+    <meta name="theme-color" content="#0d1117" />
     <title>{title}</title>
+
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="canonical" href={url} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={url} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={title} />
+
     <style>
       *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -38,6 +52,8 @@ const title = "nightowl.engineer";
       main {
         text-align: center;
         max-width: 42rem;
+        position: relative;
+        z-index: 1;
       }
 
       .wordmark {
@@ -69,16 +85,16 @@ const title = "nightowl.engineer";
         user-select: none;
       }
 
-      main {
-        position: relative;
-        z-index: 1;
+      @media (prefers-reduced-motion: reduce) {
+        .bg-owl img {
+          animation: none;
+        }
       }
-
     </style>
   </head>
   <body>
     <div class="bg-owl" aria-hidden="true">
-      <img src="/owl.png" alt="" />
+      <Image src={owlImg} alt="" width={800} loading="eager" />
     </div>
     <main>
       <h1 class="wordmark">nightowl.<span>engineer</span></h1>
