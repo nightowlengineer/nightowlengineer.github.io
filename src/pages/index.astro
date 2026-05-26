@@ -52,9 +52,34 @@ const title = "nightowl.engineer";
         color: var(--accent);
       }
 
+      .bg-owl {
+        position: fixed;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      .bg-owl img {
+        height: 80vh;
+        width: auto;
+        opacity: 0.2;
+        user-select: none;
+      }
+
+      main {
+        position: relative;
+        z-index: 1;
+      }
+
     </style>
   </head>
   <body>
+    <div class="bg-owl" aria-hidden="true">
+      <img src="/owl.png" alt="" />
+    </div>
     <main>
       <h1 class="wordmark">nightowl.<span>engineer</span></h1>
     </main>
