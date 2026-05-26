@@ -21,3 +21,5 @@ Allow: /
 
 User-agent: *
 Disallow: /
+
+Sitemap: https://nightowl.engineer/sitemap-index.xml

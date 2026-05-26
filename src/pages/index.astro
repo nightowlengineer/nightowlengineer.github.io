@@ -13,6 +13,7 @@ const url = "https://nightowl.engineer";
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={title} />
     <meta name="theme-color" content="#0d1117" />
+    <meta name="color-scheme" content="dark" />
     <title>{title}</title>
 
     <link rel="icon" href="/favicon.ico" sizes="any" />
@@ -94,7 +95,7 @@ const url = "https://nightowl.engineer";
   </head>
   <body>
     <div class="bg-owl" aria-hidden="true">
-      <Image src={owlImg} alt="" width={800} loading="eager" />
+      <Image src={owlImg} alt="" widths={[600, 900]} sizes="(max-width: 768px) 600px, 900px" loading="eager" fetchpriority="high" />
     </div>
     <main>
       <h1 class="wordmark">nightowl.<span>engineer</span></h1>
